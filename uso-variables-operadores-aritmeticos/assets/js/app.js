@@ -22,6 +22,9 @@ document.getElementById('tabla').innerHTML += `
     </tr>
 `;
 
+
+
+
 //Ejercicio 2
 var temperaturaCelsius= prompt("ingrese la temperatura en Celsius para tranformar","");
 
@@ -37,20 +40,26 @@ document.getElementById('tabla-temperaturas').innerHTML +=`
     
 </tr>`;
 
+
+
 //Ejercicio 3
 
-var dias= prompt("ingrese el numero de dias para transformar","");
+var dias= prompt("ingrese el numero de dias para transformar a semanas y años","");
 
-var semanas= Math.floor(parseFloat(dias)/7) 
+var años = Math.floor(dias/365);
+var semanas = Math.floor((dias%365)/7)
+var diasFinal = Math.floor(((dias%365)%7))
 
-var años=parseFloat(dias)/365
 
 document.getElementById('tabla-tiempo').innerHTML +=`
 <tr>
-    <td>${dias}</td>
+    <td>${años}</td>
     <td>${semanas}</td>
-    <td>${años.toFixed(2)}</td>    
+    <td>${diasFinal}</td>    
 </tr>`;
+
+
+
 
 //Ejercicio 4
 
