@@ -1,4 +1,4 @@
-document.write('<p>Estadisticas centro medico ñuñoa</p>');
+document.querySelector(".titulo").innerHTML='<h1>Estadisticas centro medico ñuñoa</h1>';
 
 //Primer Requerimiento
 
@@ -110,3 +110,14 @@ const dental=[{hora:"08:30",
             rut:"14441281-0",
             prevision:"ISAPRE"}]
 
+//Segundo Requerimiento
+
+let atenciones=document.getElementById("atenciones")
+atenciones.innerHTML+=`<h3 class="text-center">Atenciones Radiología<h3><hr>
+                        <h5 class="text-center">Primera atención: ${radiologia[0].paciente} - ${radiologia[0].prevision}| Última atención: ${radiologia[4].paciente} - ${radiologia[4].prevision}</h5><br>
+                        
+                        <h3 class="text-center">Atenciones Traumatología<h3><hr>
+                        <h5 class="text-center">Primera atención: ${traumatologia[0].paciente} - ${traumatologia[0].prevision}| Última atención: ${traumatologia[4].paciente} - ${traumatologia[4].prevision}</h5><br>
+                        
+                        <h3 class="text-center">Atenciones Traumatología<h3><hr>
+                        <h5 class="text-center">Primera atención: ${dental[0].paciente} - ${dental[0].prevision}| Última atención: ${dental[4].paciente} - ${dental[4].prevision}</h5>`
