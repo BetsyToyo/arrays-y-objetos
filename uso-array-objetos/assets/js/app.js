@@ -119,5 +119,53 @@ atenciones.innerHTML+=`<h3 class="text-center">Atenciones Radiología<h3><hr>
                         <h3 class="text-center">Atenciones Traumatología<h3><hr>
                         <h5 class="text-center">Primera atención: ${traumatologia[0].paciente} - ${traumatologia[0].prevision}| Última atención: ${traumatologia[4].paciente} - ${traumatologia[4].prevision}</h5><br>
                         
-                        <h3 class="text-center">Atenciones Traumatología<h3><hr>
+                        <h3 class="text-center">Atenciones Dentales<h3><hr>
                         <h5 class="text-center">Primera atención: ${dental[0].paciente} - ${dental[0].prevision}| Última atención: ${dental[4].paciente} - ${dental[4].prevision}</h5>`
+
+ //Tercer Requerimiento
+
+
+ 
+ let cuerpoTabla=document.querySelector(".contenido1")
+
+  
+ for (const pacientes of radiologia) {
+     
+    cuerpoTabla.innerHTML += `
+            <tr>
+                <td>${pacientes.hora}</td>
+                <td>${pacientes.especialista}</td>
+                <td>${pacientes.paciente}</td>
+                <td>${pacientes.rut}</td>
+                <td>${pacientes.prevision}</td>
+            </tr>
+        `;
+ }
+
+ let cuerpoTabla2=document.querySelector(".contenido2")
+ for (let index = 0; index < traumatologia.length; index++) {
+     
+     cuerpoTabla2.innerHTML += `
+            <tr>
+                <td>${traumatologia[index].hora}</td>
+                <td>${traumatologia[index].especialista}</td>
+                <td>${traumatologia[index].paciente}</td>
+                <td>${traumatologia[index].rut}</td>
+                <td>${traumatologia[index].prevision}</td>
+            </tr>
+        `;     
+ }
+
+
+    let cuerpoTabla3=document.querySelector(".contenido3")
+    for (const key in dental) {
+        cuerpoTabla3.innerHTML +=`
+    <tr>
+        <td>${dental[key].hora}</td>
+        <td>${dental[key].especialista}</td>
+        <td>${dental[key].paciente}</td>
+        <td>${dental[key].rut}</td>
+        <td>${dental[key].prevision}</td>
+    </tr>
+    `;
+    }
